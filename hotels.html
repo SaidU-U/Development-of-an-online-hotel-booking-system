@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Список отелей — HotelBook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">🏨 HotelBook</div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="hotels.html" class="nav__link active">Отели</a>
+        <a href="booking.html" class="nav__link">Бронирование</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Каталог отелей</h1>
+      <p>Выберите подходящий вариант из нашего предложения</p>
+    </div>
+  </div>
+
+  <div class="container hotels-page">
+
+    <aside class="filters">
+      <h3>Фильтры</h3>
+
+      <div class="filter-group">
+        <label>Цена за ночь (₼)</label>
+        <div class="price-range">
+          <input type="number" id="priceMin" placeholder="От" value="0" min="0"/>
+          <span>—</span>
+          <input type="number" id="priceMax" placeholder="До" value="250" min="0"/>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Звёздность</label>
+        <div class="stars-filter">
+          <label><input type="checkbox" value="5" class="star-cb"/> ★★★★★</label>
+          <label><input type="checkbox" value="4" class="star-cb"/> ★★★★</label>
+          <label><input type="checkbox" value="3" class="star-cb"/> ★★★</label>
+          <label><input type="checkbox" value="2" class="star-cb"/> ★★</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label>Город</label>
+        <select id="cityFilter">
+          <option value="">Все города</option>
+          <option>Баку</option>
+          <option>Стамбул</option>
+          <option>Дубай</option>
+          <option>Москва</option>
+        </select>
+      </div>
+
+      <button class="btn btn--primary" style="width:100%" onclick="applyFilters()">Применить</button>
+      <button class="btn btn--outline" style="width:100%;margin-top:8px" onclick="resetFilters()">Сбросить</button>
+    </aside>
+    <main class="hotels-list" id="hotelsList">
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo">🏨 HotelBook</div>
+      <p>© 2026 HotelBook. Все права защищены.</p>
+      <nav class="footer__nav">
+        <a href="index.html">Главная</a>
+        <a href="hotels.html">Отели</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

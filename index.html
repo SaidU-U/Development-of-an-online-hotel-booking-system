@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HotelBook — Онлайн-бронирование отелей</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">🏨 HotelBook</div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link active">Главная</a>
+        <a href="hotels.html" class="nav__link">Отели</a>
+        <a href="booking.html" class="nav__link">Бронирование</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <h1 class="hero__title">Найдите идеальный отель<br>для вашего путешествия</h1>
+      <p class="hero__subtitle">Удобное бронирование онлайн — без лишних звонков и очередей</p>
+
+      <a href="hotels.html" class="btn btn--hero">Найти отель</a>
+    </div>
+  </section>
+
+  <section class="features container">
+    <h2 class="section-title">Почему выбирают нас</h2>
+    <div class="features__grid">
+      <div class="feature-card">
+        <div class="feature-card__icon">🔒</div>
+        <h3>Безопасная оплата</h3>
+        <p>Все транзакции защищены современными методами шифрования.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">⚡</div>
+        <h3>Мгновенное подтверждение</h3>
+        <p>Бронирование подтверждается сразу — без ожидания.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">🌍</div>
+        <h3>Широкий выбор</h3>
+        <p>Отели в разных городах — от бюджетных до премиум-класса.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-card__icon">💬</div>
+        <h3>Поддержка клиентов</h3>
+        <p>Наша команда всегда готова ответить на ваши вопросы.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="popular container">
+    <h2 class="section-title">Популярные направления</h2>
+    <div class="popular__grid">
+      <div class="dest-card" onclick="window.location.href='hotels.html'">
+        <img class="dest-card__img" src="https://images.unsplash.com/photo-1596306499300-0b7b1689b9f6?w=400&h=200&fit=crop&fp-y=0.3" alt="Баку" loading="lazy" />
+        <div class="dest-card__info">
+          <span class="dest-card__name">Баку</span>
+          <span class="dest-card__count">3 отеля</span>
+        </div>
+      </div>
+      <div class="dest-card" onclick="window.location.href='hotels.html'">
+        <img class="dest-card__img" src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=400&h=200&fit=crop" alt="Стамбул" loading="lazy" />
+        <div class="dest-card__info">
+          <span class="dest-card__name">Стамбул</span>
+          <span class="dest-card__count">2 отеля</span>
+        </div>
+      </div>
+      <div class="dest-card" onclick="window.location.href='hotels.html'">
+        <img class="dest-card__img" src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=200&fit=crop" alt="Дубай" loading="lazy" />
+        <div class="dest-card__info">
+          <span class="dest-card__name">Дубай</span>
+          <span class="dest-card__count">1 отель</span>
+        </div>
+      </div>
+      <div class="dest-card" onclick="window.location.href='hotels.html'">
+        <img class="dest-card__img" src="https://images.unsplash.com/photo-1513326738677-b964603b136d?w=400&h=200&fit=crop" alt="Москва" loading="lazy" />
+        <div class="dest-card__info">
+          <span class="dest-card__name">Москва</span>
+          <span class="dest-card__count">2 отеля</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo">🏨 HotelBook</div>
+      <p>© 2026 HotelBook. Все права защищены.</p>
+      <nav class="footer__nav">
+        <a href="index.html">Главная</a>
+        <a href="hotels.html">Отели</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

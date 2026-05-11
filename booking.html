@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Бронирование — HotelBook</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <div class="logo">🏨 HotelBook</div>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Главная</a>
+        <a href="hotels.html" class="nav__link">Отели</a>
+        <a href="booking.html" class="nav__link active">Бронирование</a>
+        <a href="contacts.html" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Оформление бронирования</h1>
+      <p>Заполните форму — и мы сразу подтвердим вашу бронь</p>
+    </div>
+  </div>
+
+  <div class="container booking-page">
+
+    <div class="booking-form-wrap">
+      <h2>Ваши данные</h2>
+
+      <div class="form-group">
+        <label>Имя</label>
+        <input type="text" id="firstName" placeholder="Введите имя..." />
+        <span class="error" id="firstNameErr"></span>
+      </div>
+      <div class="form-group">
+        <label>Фамилия</label>
+        <input type="text" id="lastName" placeholder="Введите фамилию..." />
+        <span class="error" id="lastNameErr"></span>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="mail@example.com" />
+        <span class="error" id="emailErr"></span>
+      </div>
+      <div class="form-group">
+        <label>Телефон</label>
+        <input type="tel" id="phone" placeholder="+994 50 000 00 00" />
+        <span class="error" id="phoneErr"></span>
+      </div>
+
+      <h2 style="margin-top:32px">Детали бронирования</h2>
+
+      <div class="form-group">
+        <label>Выберите отель</label>
+        <select id="hotelSelect">
+          <option value="">— Выберите отель —</option>
+          <option value="grand">Grand Baku Hotel ★★★★★ — 205₼/ночь</option>
+          <option value="seaside">Seaside Inn ★★★★ — 145₼/ночь</option>
+          <option value="cityview">CityView Hotel ★★★ — 94₼/ночь</option>
+          <option value="comfort">Comfort Stay ★★★★ — 162₼/ночь</option>
+          <option value="plaza">Istanbul Plaza ★★★★★ — 255₼/ночь</option>
+          <option value="ottoman">Ottoman Suites ★★★★ — 189₼/ночь</option>
+          <option value="dubai">Dubai Palm Resort ★★★★ — 170₼/ночь</option>
+          <option value="moscow">Moscow Classic ★★★★ — 187₼/ночь</option>
+          <option value="budget">Budget Express Moscow ★★ — 51₼/ночь</option>
+        </select>
+        <span class="error" id="hotelErr"></span>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Дата заезда</label>
+          <input type="date" id="bookCheckIn" />
+          <span class="error" id="checkInErr"></span>
+        </div>
+        <div class="form-group">
+          <label>Дата выезда</label>
+          <input type="date" id="bookCheckOut" />
+          <span class="error" id="checkOutErr"></span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Количество гостей</label>
+        <select id="bookGuests">
+          <option>1</option><option>2</option><option>3</option><option>4+</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Особые пожелания (необязательно)</label>
+        <textarea id="wishes" rows="3" placeholder="Например: поздний заезд, высокий этаж..."></textarea>
+      </div>
+
+      <button class="btn btn--primary" style="width:100%;font-size:16px;padding:14px" onclick="submitBooking()">
+        Подтвердить бронирование
+      </button>
+    </div>
+
+    <aside class="booking-summary" id="bookingSummary">
+      <h3>Итог бронирования</h3>
+      <div class="summary-row"><span>Отель:</span><span id="sumHotel">—</span></div>
+      <div class="summary-row"><span>Заезд:</span><span id="sumIn">—</span></div>
+      <div class="summary-row"><span>Выезд:</span><span id="sumOut">—</span></div>
+      <div class="summary-row"><span>Ночей:</span><span id="sumNights">—</span></div>
+      <div class="summary-row"><span>Гостей:</span><span id="sumGuests">—</span></div>
+      <div class="summary-divider"></div>
+      <div class="summary-row summary-row--total"><span>Итого:</span><span id="sumTotal">—</span></div>
+    </aside>
+  </div>
+
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal">
+      <div class="modal__icon">✅</div>
+      <h2>Бронирование подтверждено!</h2>
+      <p id="modalText"></p>
+      <button class="btn btn--primary" onclick="closeModal()">На главную</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="logo">🏨 HotelBook</div>
+      <p>© 2026 HotelBook. Все права защищены.</p>
+      <nav class="footer__nav">
+        <a href="index.html">Главная</a>
+        <a href="hotels.html">Отели</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
